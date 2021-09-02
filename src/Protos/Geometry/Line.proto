@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.Geometry";
+
+package Line;
+
+service ILineService {
+	rpc GetLine(LineRequest) returns (LineResult);
+}
+
+message Point3{
+	double x = 1;
+	double y = 2;
+	double z = 3;
+}
+
+message LineRequest{
+	Point3 startPoint = 1;
+	Point3 endPoint = 2;
+}
+
+message LineResult{
+	Point3 startPoint = 1;
+	Point3 endPoint = 2;
+	double length = 3;
+}
+
