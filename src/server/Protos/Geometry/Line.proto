@@ -4,7 +4,7 @@ option csharp_namespace = "gRPC.Geometry";
 
 package Line;
 
-service ILineService {
+service Line {
 	rpc GetLine(LineRequest) returns (LineResult);
 }
 
