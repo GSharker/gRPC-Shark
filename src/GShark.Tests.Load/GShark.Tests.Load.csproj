@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Debug;Release;GShark.LoadTest</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GShark" Version="1.4.0" />
+    <PackageReference Include="NBomber.Http" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GShark.gRPC.Base\GShark.gRPC.Base.csproj" />
+    <ProjectReference Include="..\GShark.gRPC.Client\GShark.gRPC.Client.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
+    <Configurations>Debug;Release;GShark.LoadTest</Configurations>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Grpc.HttpApi" Version="0.1.0-alpha.21317.5" />
+       
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Protobuf Include="..\Protos\*.proto" GrpcServices="Both" />
+    </ItemGroup>
+    
+</Project>
