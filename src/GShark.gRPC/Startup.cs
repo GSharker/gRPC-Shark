@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using GShark.gRPC;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +41,7 @@ namespace GShark.Grpc
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<SampleGeometryService>();
+                endpoints.MapGrpcService<NurbsGeometryService>();
 
                 endpoints.MapGet("/", async context =>
                 {

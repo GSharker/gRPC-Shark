@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "GShark.gRPC";
+
+import "google/api/annotations.proto";
+
+
+
+service NurbsService {
+	rpc CreatePointAtCurve(CreatePointAtCurveRequest) returns (CreatePointAtCurveResponse) {
+    option (google.api.http) = {
+      post: "/geom/nurbscurve/pointat"
+      body: "*"
+    };
+  }
+}
+
+message Point3 {
+	double x = 1;
+	double y = 2;
+	double z = 3;
+}
+message Point4 {
+	double x = 1;
+	double y = 2;
+	double z = 3;
+	double w = 4;
+}
+
+message CreatePointAtCurveRequest {
+	repeated Point3 points = 1;
+	repeated double point_weights = 2;
+	int32 degree = 3;
+	double parameter = 4;
+}
+
+message CreatePointAtCurveResponse {
+	Point3 point = 1;
+}
