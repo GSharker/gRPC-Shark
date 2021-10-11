@@ -4,8 +4,6 @@ option csharp_namespace = "GShark.gRPC";
 
 import "google/api/annotations.proto";
 
-
-
 service NurbsService {
 	rpc CreatePointAtCurve(CreatePointAtCurveRequest) returns (CreatePointAtCurveResponse) {
     option (google.api.http) = {

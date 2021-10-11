@@ -4,6 +4,6 @@ namespace GShark.Dto
 {
     public class CreatePointAtCurveResponseDto
     {        
-        public IEnumerable<Point3Dto> Point { get; set; }
+        public Point3Dto Point { get; set; }
     }
 }

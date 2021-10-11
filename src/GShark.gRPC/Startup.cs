@@ -41,7 +41,7 @@ namespace GShark.Grpc
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<SampleGeometryService>();
-                endpoints.MapGrpcService<NurbsGeometryService>();
+                //endpoints.MapGrpcService<NurbsGeometryService>();
 
                 endpoints.MapGet("/", async context =>
                 {
